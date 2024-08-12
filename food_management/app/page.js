@@ -62,18 +62,21 @@ export default function Home() {
   const handleClose = () => setOpen(false)
 
   return (
-    <Box>
+    <Box width="100vw" height="100vh" display="flex" justifyContent="center" gap={2}>
+      <Modal
+      open={open} onClose={handleClose}>
+        <Box
+          position="absolute"
+          top="50%"
+          left="50%"
+          transform="translate(-50%,-50%)"
+          width={400}
+          bgcolor
+          >
+          
+          </Box>
+      </Modal>
       <Typography variant="h1">Food Management</Typography>
-      {
-        inventory.forEach((item) => {
-          return (
-            <>
-            {item.name}
-            {item.count}
-            </>
-          )
-        })
-      }
     </Box>
   )
 }
